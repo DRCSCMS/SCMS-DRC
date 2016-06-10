@@ -5,6 +5,7 @@ using System.Text;
 using System.Diagnostics;
 using System.IO;
 using System.Configuration;
+using System.Reflection;
 using System.Web;
 
 namespace SCMS.Reports
@@ -13,6 +14,9 @@ namespace SCMS.Reports
     {
         private static byte[] GeneratePdfBytes(string url, List<String> options = null)
         {
+            //string path = Path.Combine(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location), @"Data\Names.txt");
+           // string[] files = File.ReadAllLines(path);
+
             var fileName = " - ";
             var wkhtmlDir = ConfigurationManager.AppSettings["wkhtml"];
             var wkhtml = wkhtmlDir + "wkhtmltopdf.exe";

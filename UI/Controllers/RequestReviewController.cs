@@ -95,7 +95,7 @@ namespace SCMS.UI.Controllers
             rrModel.ApprovalOrderRequests = orderRequests;
 
             //REQUESTS FOR REVIEW
-            
+
             List<Model.PaymentRequest> paymentRequests = new List<PaymentRequest>();
             List<Model.WarehouseRelease> warehouseReleases = new List<WarehouseRelease>();
             List<Model.GoodsReceivedNote> goodsReceivedNotes = new List<GoodsReceivedNote>();
@@ -113,7 +113,7 @@ namespace SCMS.UI.Controllers
 
             //Construct Lists for Notification menu
             List<Models.ViewR4Payment> viewRFPList = ConstructRFPListForNotification(paymentRequests);
-            
+
             List<Model.GoodsReceivedNote> viewGRNList = goodsReceivedNotes;
             List<Models.CompletionCtificate> viewCCList = ConstructCCListForNotification(completionCertificates);
 
@@ -267,7 +267,7 @@ namespace SCMS.UI.Controllers
                     //Notify requestor
                     string msgBody = string.Format(NotificationHelper.orApprovedMsgBody, entityOR.Staff2.Person.FirstName, entityOR.RefNumber);
                     notificationService.SendNotification(entityOR.Staff2.Person.OfficialEmail, msgBody, NotificationHelper.orsubject);
-                    scope.Complete();                    
+                    scope.Complete();
                 }
                 catch (Exception ex)
                 {
@@ -399,7 +399,7 @@ namespace SCMS.UI.Controllers
         {
             Model.OrderRequest or = orderRequestService.GetOrderRequestById(Id);
             Model.RejectOR model = new RejectOR { Id = Id, RefNumber = or.RefNumber };
-            
+
             if (or.IsReviewed == true)
             {
                 model.IsReview = false;
@@ -506,7 +506,7 @@ namespace SCMS.UI.Controllers
             List<BudgetCheckResult> bcrList = purchaseOrderService.RunFundsAvailableCheck(reviewPO.Id);
             if (bcrList.Count > 0)
                 return LoadPurchaseOrder(reviewPO.Id, bcrList);
-            
+
             entityPO.ApprovedBy = userContext.CurrentUser.StaffId;
             entityPO.ApprovedOn = DateTime.Now;
             entityPO.IsApproved = true;
@@ -765,7 +765,7 @@ namespace SCMS.UI.Controllers
         {
             return View(wroService.GetWRNs().FirstOrDefault(p => p.Id == id));
         }
-        
+
         [AcceptVerbs(HttpVerbs.Post)]
         public ActionResult ApproveWRO(Model.WarehouseRelease wroModel)
         {
@@ -821,7 +821,7 @@ namespace SCMS.UI.Controllers
             List<Currency> currencies = orderRequestService.GetCurrencies();
             if (actionType == NotificationHelper.approvalCode)
                 model.PPItemList = model.ProcurementPlanItems.Where(p => !p.IsApproved).OrderBy(p => p.Item.Name).ToList();
-            else if(actionType == NotificationHelper.approvalIICode)
+            else if (actionType == NotificationHelper.approvalIICode)
                 model.PPItemList = model.ProcurementPlanItems.Where(p => p.IsReviewed && !p.IsApproved2).OrderBy(p => p.Item.Name).ToList();
             else if (actionType == NotificationHelper.reviewCode)
                 model.PPItemList = model.ProcurementPlanItems.Where(p => p.IsApproved && !p.IsReviewed).OrderBy(p => p.Item.Name).ToList();
@@ -851,36 +851,59 @@ namespace SCMS.UI.Controllers
             {
                 try
                 {
-                    ProcurementPlanItem item;
-                    bool actionPerformed = false;
-                    foreach (var ppItem in model.PPItemList)
+                    using (var dbContext = new SCMSEntities())
                     {
-                        if (!ppItem.IsApproved)
-                            continue;
-                        item = ppService.GetProcurementPlanItemById(ppItem.Id);
-                        item.Quantity = ppItem.Quantity;
-                        item.UnitCost = ppItem.UnitCost;
-                        item.TotalCost = ppItem.Quantity * ppItem.UnitCost;
-                        item.BudgetLineId = ppItem.BudgetLineId;
-                        if (model.ActionType == NotificationHelper.approvalCode)
-                            item.IsApproved = true;
-                        else if (model.ActionType == NotificationHelper.approvalIICode)
-                            item.IsApproved2 = true;
-                        else if (model.ActionType == NotificationHelper.reviewCode)
-                            item.IsReviewed = true;
-                        else if (model.ActionType == NotificationHelper.authorizationCode)
-                            item.IsAuthorized = true;
-                        ppService.SaveProcurementPlanItem(item);
-                        actionPerformed = true;
-                    }
 
-                    if (actionPerformed)
-                    {
-                        //Reload model from db to have access to all properties
-                        string actionType = model.ActionType;
-                        model = ppService.GetProcurementPlanById(model.Id);
-                        model.ActionType = actionType;
-                        PPApproved(model);
+
+
+                        ProcurementPlanItem item;
+                        bool actionPerformed = false;
+                        foreach (var ppItem in model.PPItemList)
+                        {
+                            if (!ppItem.IsApproved)
+                                continue;
+                            item = dbContext.ProcurementPlanItems.FirstOrDefault(p => p.Id == ppItem.Id);// ppService.GetProcurementPlanItemById(ppItem.Id);
+                            item.Quantity = ppItem.Quantity;
+                            item.UnitCost = ppItem.UnitCost;
+                            item.TotalCost = ppItem.Quantity * ppItem.UnitCost;
+                            item.BudgetLineId = ppItem.BudgetLineId;
+                            
+                            if (model.ActionType == NotificationHelper.approvalCode)
+                                item.IsApproved = true;
+                            else if (model.ActionType == NotificationHelper.approvalIICode)
+                                item.IsApproved2 = true;
+                            else if (model.ActionType == NotificationHelper.reviewCode)
+                                item.IsReviewed = true;
+                            else if (model.ActionType == NotificationHelper.authorizationCode)
+                                item.IsAuthorized = true;
+
+                            if (ppItem.Id.Equals(Guid.Empty))
+                            {
+                                ppItem.Id = Guid.NewGuid();
+                                dbContext.ProcurementPlanItems.Add(item);
+                            }
+                            else
+                            {
+                                var existing = dbContext.ProcurementPlanItems.FirstOrDefault(p => p.Id == ppItem.Id);
+
+                                dbContext.Entry(existing).CurrentValues.SetValues(item);
+                            }
+
+                            dbContext.SaveChanges();
+
+
+                            //ppService.SaveProcurementPlanItem(item);
+                            actionPerformed = true;
+                        }
+
+                        if (actionPerformed)
+                        {
+                            //Reload model from db to have access to all properties
+                            string actionType = model.ActionType;
+                            model = ppService.GetProcurementPlanById(model.Id);
+                            model.ActionType = actionType;
+                            PPApproved(model);
+                        }
                     }
                     scope.Complete();
                 }
@@ -925,7 +948,7 @@ namespace SCMS.UI.Controllers
                 notificationService.SendNotification(pp.Staff4.Person.OfficialEmail, string.Format(NotificationHelper.ppAuthorizedMsgBody, pp.Staff4.Person.FirstName, pp.RefNumber), NotificationHelper.ppsubject);
                 //Notify Project Manager
                 notificationService.SendNotification(pp.ProjectDonor.Staff.Person.OfficialEmail, string.Format(NotificationHelper.ppPMNotifyAuthorizedMsgBody, pp.ProjectDonor.Staff.Person.FirstName, pp.RefNumber), NotificationHelper.ppsubject);
-            }            
+            }
             ppService.SaveProcurementPlan(pp);
         }
 
@@ -988,7 +1011,7 @@ namespace SCMS.UI.Controllers
         #region .Completion Certificate.
 
         public ActionResult LoadCCForApproval(Guid id)
-        {            
+        {
             return View("ApproveCC", ccService.GetCCById(id));
         }
 

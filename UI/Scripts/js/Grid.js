@@ -10,7 +10,7 @@
     var href = $exportLink.attr('href');
 
     // Update the 'page' parameter with the grid's current page
-    href = href.replace(/page=([^&]*)/, 'page=' + grid.currentPage);
+    href = href.replace(/page=([^&]*)/, 'page=' + (grid.currentPage || '~'));
 
     // Update the 'pageSize' parameter with the grids' current pageSize state
     href = href.replace(/pageSize=([^&]*)/, 'pageSize=' + (grid.pageSize || '~'));
@@ -38,7 +38,7 @@ function onGRNDataBound() {
     var href = $exportLink.attr('href');
 
     // Update the 'page' parameter with the grid's current page
-    href = href.replace(/page=([^&]*)/, 'page=' + grid.currentPage);
+    href = href.replace(/page=([^&]*)/, 'page=' + (grid.currentPage || '~'));
 
     // Update the 'pageSize' parameter with the grids' current pageSize state
     href = href.replace(/pageSize=([^&]*)/, 'pageSize=' + (grid.pageSize || '~'));
@@ -67,7 +67,7 @@ function onGenInventoryDataBound() {
     var href = $exportLink.attr('href');
 
     // Update the 'page' parameter with the grid's current page
-    href = href.replace(/page=([^&]*)/, 'page=' + grid.currentPage);
+    href = href.replace(/page=([^&]*)/, 'page=' + (grid.currentPage || '~'));
 
     // Update the 'pageSize' parameter with the grids' current pageSize state
     href = href.replace(/pageSize=([^&]*)/, 'pageSize=' + (grid.pageSize || '~'));
@@ -95,7 +95,7 @@ function onConsumableDataBound() {
     var href = $exportLink.attr('href');
 
     // Update the 'page' parameter with the grid's current page
-    href = href.replace(/page=([^&]*)/, 'page=' + grid.currentPage);
+    href = href.replace(/page=([^&]*)/, 'page=' + (grid.currentPage || '~'));
 
     // Update the 'pageSize' parameter with the grids' current pageSize state
     href = href.replace(/pageSize=([^&]*)/, 'pageSize=' + (grid.pageSize || '~'));
@@ -155,7 +155,7 @@ function onAssetDataBound() {
     var href = $exportLink.attr('href');
 
     // Update the 'page' parameter with the grid's current page
-    href = href.replace(/page=([^&]*)/, 'page=' + grid.currentPage);
+    href = href.replace(/page=([^&]*)/, 'page=' + (grid.currentPage || '~'));
 
     // Update the 'pageSize' parameter with the grids' current pageSize state
     href = href.replace(/pageSize=([^&]*)/, 'pageSize=' + (grid.pageSize || '~'));
@@ -183,7 +183,7 @@ function onDisposedAssetDataBound() {
     var href = $exportLink.attr('href');
 
     // Update the 'page' parameter with the grid's current page
-    href = href.replace(/page=([^&]*)/, 'page=' + grid.currentPage);
+    href = href.replace(/page=([^&]*)/, 'page=' + (grid.currentPage || '~'));
 
     // Update the 'pageSize' parameter with the grids' current pageSize state
     href = href.replace(/pageSize=([^&]*)/, 'pageSize=' + (grid.pageSize || '~'));
@@ -268,7 +268,7 @@ function onCCDataBound() {
     var href = $exportLink.attr('href');
 
     // Update the 'page' parameter with the grid's current page
-    href = href.replace(/page=([^&]*)/, 'page=' + grid.currentPage);
+    href = href.replace(/page=([^&]*)/, 'page=' + (grid.currentPage || '~'));
 
     // Update the 'pageSize' parameter with the grids' current pageSize state
     href = href.replace(/pageSize=([^&]*)/, 'pageSize=' + (grid.pageSize || '~'));

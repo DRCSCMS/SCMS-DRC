@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Text;
 using System.Web;
@@ -88,7 +89,7 @@ namespace SCMS.CoreBusinessLogic.GeneralHelper
                             .IncludeOrderRequest()
                             .IncludeProjectBudget()
                             .IncludeProcurementPlan()
-                            .IncludeProjectBudget()
+                            .IncludePurchaseOrder()
                             .Where(p => p.ProcurementPlan.ProjectDonor.Project.CountryProgrammeId == CountryProgrammeId).ToList();
                     }
                 }

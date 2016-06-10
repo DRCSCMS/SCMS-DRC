@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.ComponentModel.DataAnnotations;
+using System.Data.Entity.ModelConfiguration.Conventions;
 using System.Web.Mvc;
 
 namespace SCMS.Model
@@ -10,6 +11,8 @@ namespace SCMS.Model
     [MetadataType(typeof(ProcurementPlanItemMetaData))]
     public partial class ProcurementPlanItem
     {
+        private int? deliveryAmount = 0;
+
         public SelectList Items { get; set; }
 
         public SelectList Currencies { get; set; }
@@ -51,13 +54,15 @@ namespace SCMS.Model
             }
         }
 
-        //public int DeliveredAmount
-        //{
-        //    get
-        //    {
-        //        return (int)PurchaseOrderItems.Sum(p => p.GoodsReceivedNoteItems.Where(g => g.GoodsReceivedNote.Verified).Sum(g => (g.QuantityDelivered - g.QuantityDamaged)));
-        //    }
-        //}
+        public int? DeliveredAmount
+        {
+            get
+            {
+                deliveryAmount = (int)PurchaseOrderItems.Sum(p => p.GoodsReceivedNoteItems.Where(g => g.GoodsReceivedNote.Verified).Sum(g => (g.QuantityDelivered - g.QuantityDamaged)));
+                return deliveryAmount;
+            }
+            set { deliveryAmount = value; }
+        }
 
         public int QuantityToOrder { get; set; }
 

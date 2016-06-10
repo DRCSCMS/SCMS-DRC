@@ -262,6 +262,10 @@
     <Compile Include="Validators\Person\SystemUserModelValidator.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="..\packages\wkhtmltopdf.msvc.64.exe.0.12.2.5\tools\wkhtmltopdf.exe">
+      <Link>wkhtmltopdf.exe</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="Areas\Reports\Views\BudgetReports\BudgetPipeLine.aspx" />
     <Content Include="Areas\Reports\Views\DocumentReports\DocumentStatus.aspx" />
     <Content Include="Areas\Reports\Views\FinanceReports\RFPBudgeLines.aspx" />
@@ -459,13 +463,17 @@
     <Content Include="Content\themes\copenhagen\images\icons\export2pdf.png" />
     <Content Include="Content\themes\copenhagen\images\icons\help.png" />
     <Content Include="Content\themes\copenhagen\images\icons\export2excel.png" />
+    <Content Include="Content\themes\copenhagen\images\icons\logout.png" />
     <Content Include="Content\themes\copenhagen\images\icons\search.png" />
     <Content Include="Content\themes\copenhagen\images\layout\banner.png" />
     <Content Include="Content\themes\copenhagen\images\layout\bg1.png" />
+    <Content Include="Content\themes\copenhagen\images\layout\bg2.png" />
     <Content Include="Content\themes\copenhagen\images\layout\ddg-logo.png" />
     <Content Include="Content\themes\copenhagen\images\layout\drc-logo.png" />
-    <Content Include="Content\themes\copenhagen\images\layout\lines.png" />
+    <Content Include="Content\themes\copenhagen\images\layout\lock.png" />
+    <Content Include="Content\themes\copenhagen\images\layout\modal.png" />
     <Content Include="Content\themes\copenhagen\images\layout\scms.png" />
+    <Content Include="Content\themes\copenhagen\images\layout\shell.png" />
     <Content Include="Content\themes\copenhagen\images\layout\welcome.jpg" />
     <Content Include="Content\themes\copenhagen\images\loading.gif" />
     <Content Include="Content\themes\copenhagen\images\Minus-Green-Button-icon.png" />
@@ -534,6 +542,7 @@
     <Content Include="obj\Debug\UI.csproj.FileListAbsolute.txt" />
     <Content Include="obj\Debug\UI.dll" />
     <Content Include="obj\Debug\UI.pdb" />
+    <Content Include="readme.txt" />
     <Content Include="Scripts\2012.1.214\jquery-1.7.1.min.js" />
     <Content Include="Scripts\2012.1.214\jquery.validate.min.js" />
     <Content Include="Scripts\2012.1.214\telerik.all.min.js" />
@@ -721,25 +730,19 @@
     <Folder Include="Content\tmp_reports\html\ex_files\" />
     <Folder Include="obj\Debug\edmxResourcesToEmbed\Models\" />
     <Folder Include="obj\Debug\TempPE\" />
+    <Folder Include="Views\Account\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\Budget\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\Country\CountryList.cshtml" />
     <Content Include="Views\Country\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\CountryProgramme\CountryProgrammeList.cshtml" />
     <Content Include="Views\CountryProgramme\Index.cshtml" />
-    <Content Include="Views\Currency\CurrencyList.cshtml" />
     <Content Include="Views\Currency\Index.cshtml" />
     <Content Include="Views\Inventory\JsLogic.cshtml" />
     <Content Include="Views\location\Index.cshtml" />
-    <Content Include="Views\location\LocationList.cshtml" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Views\Designation\DesignationList.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\Designation\Index.cshtml" />
@@ -749,15 +752,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\ShippingTerm\Index.cshtml" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Views\ShippingTerm\Details.cshtml" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Views\ShippingTerm\Create.cshtml" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Views\ShippingTerm\Edit.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\PaymentTerm\Index.cshtml" />
@@ -792,7 +786,6 @@
     <Content Include="Views\TenderAnalysis\LoadAddSuplier.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\Budget\EditBudget.cshtml" />
     <Content Include="Views\Budget\ProjectBudgetList.cshtml" />
   </ItemGroup>
   <ItemGroup>
@@ -812,10 +805,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\DashBoard\Index.cshtml" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Views\Account\DashBoard.cshtml" />
-    <Content Include="Views\Account\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\ItemCategory\CreateEdit.cshtml" />
@@ -935,10 +924,8 @@
     <Content Include="Views\PurchaseOrder\ViewPurchaseOrdersDetails.cshtml" />
     <Content Include="Views\Request4Payment\ViewR4P.cshtml" />
     <Content Include="Views\Request4Payment\ViewR4PDetails.cshtml" />
-    <Content Include="Views\Request4Payment\ChooseR4PType.cshtml" />
     <Content Include="Views\GoodsReceivedNote\Index.cshtml" />
     <Content Include="Views\RequestReview\EditOrderRequest.cshtml" />
-    <Content Include="Views\ShippingTerm\Delete.cshtml" />
     <Content Include="Views\DashBoard\DocsDashBoard.cshtml" />
     <Content Include="Views\DashBoard\DashboardMasterBudget.cshtml" />
     <Content Include="Views\Menu\XmlMenu.cshtml" />
@@ -949,8 +936,6 @@
     <Content Include="Views\GoodsReceivedNote\LoadRegsiterAsset.cshtml" />
     <Content Include="Views\GoodsReceivedNote\ViewGRNDetails.cshtml" />
     <Content Include="Views\GoodsReceivedNote\ViewGRNs.cshtml" />
-    <Content Include="Views\WareHouse\ViewNRNDetails.cshtml" />
-    <Content Include="Views\WareHouse\viewWRN.cshtml" />
     <Content Include="Views\RequestReview\AuthComplete.cshtml" />
     <Content Include="Views\RequestReview\AuthorizeOR.cshtml" />
     <Content Include="Views\RequestReview\AuthorizeRFP.cshtml" />
@@ -981,12 +966,9 @@
     <Content Include="Views\FleetManager\LoadFleetAccecories.cshtml" />
     <Content Include="Views\FleetManager\LoadFleetDetails.cshtml" />
     <Content Include="Views\FleetManager\LoadNewDailyFleet.cshtml" />
-    <Content Include="Views\FleetManager\LoadNewDriverInfo.cshtml" />
     <Content Include="Views\FleetManager\LoadNewFleetDetail.cshtml" />
     <Content Include="Views\FleetManager\LoadNewGarageInfo.cshtml" />
-    <Content Include="Views\FleetManager\LoadSummaryFleetDetails.cshtml" />
     <Content Include="Views\FundPosting\FundPostingList.cshtml" />
-    <Content Include="Views\FundPosting\GeneralResponse.cshtml" />
     <Content Include="Views\FundPosting\Index.cshtml" />
     <Content Include="Views\FundPosting\PostRFP.cshtml" />
     <Content Include="Views\FundPosting\RFPList.cshtml" />
@@ -1022,7 +1004,6 @@
     <Content Include="Views\WRForm\Index.cshtml" />
     <Content Include="Views\WRForm\LoadWRF.cshtml" />
     <Content Include="Views\WRForm\LoadWRFItem.cshtml" />
-    <Content Include="Views\WRForm\LoadWRItems.cshtml" />
     <Content Include="Views\WRForm\ViewNRNDetails.cshtml" />
     <Content Include="Views\WRForm\viewWRN.cshtml" />
     <Content Include="Views\Donor\CreateEdit.cshtml" />

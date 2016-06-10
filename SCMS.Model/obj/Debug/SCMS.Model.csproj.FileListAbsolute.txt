@@ -46,3 +46,14 @@ D:\SCMS\RASHID\SCMS\SCMS.Model\bin\Debug\Microsoft.Web.Infrastructure.xml
 D:\SCMS\RASHID\SCMS\SCMS.Model\bin\Debug\System.Web.WebPages.Deployment.xml
 D:\SCMS\RASHID\SCMS\SCMS.Model\obj\Debug\SCMS.Model.dll
 D:\SCMS\RASHID\SCMS\SCMS.Model\obj\Debug\SCMS.Model.pdb
+C:\Users\morgan\Documents\Visual Studio 2015\Projects\VTL\SCMS-DRC\SCMS.Model\bin\Debug\SCMS.Model.dll.config
+C:\Users\morgan\Documents\Visual Studio 2015\Projects\VTL\SCMS-DRC\SCMS.Model\bin\Debug\SCMS.Model.dll
+C:\Users\morgan\Documents\Visual Studio 2015\Projects\VTL\SCMS-DRC\SCMS.Model\bin\Debug\SCMS.Model.pdb
+C:\Users\morgan\Documents\Visual Studio 2015\Projects\VTL\SCMS-DRC\SCMS.Model\bin\Debug\EntityFramework.dll
+C:\Users\morgan\Documents\Visual Studio 2015\Projects\VTL\SCMS-DRC\SCMS.Model\bin\Debug\SCMS.Resource.dll
+C:\Users\morgan\Documents\Visual Studio 2015\Projects\VTL\SCMS-DRC\SCMS.Model\bin\Debug\System.Web.Mvc.dll
+C:\Users\morgan\Documents\Visual Studio 2015\Projects\VTL\SCMS-DRC\SCMS.Model\bin\Debug\SCMS.Resource.pdb
+C:\Users\morgan\Documents\Visual Studio 2015\Projects\VTL\SCMS-DRC\SCMS.Model\bin\Debug\EntityFramework.xml
+C:\Users\morgan\Documents\Visual Studio 2015\Projects\VTL\SCMS-DRC\SCMS.Model\obj\Debug\SCMS.Model.csprojResolveAssemblyReference.cache
+C:\Users\morgan\Documents\Visual Studio 2015\Projects\VTL\SCMS-DRC\SCMS.Model\obj\Debug\SCMS.Model.dll
+C:\Users\morgan\Documents\Visual Studio 2015\Projects\VTL\SCMS-DRC\SCMS.Model\obj\Debug\SCMS.Model.pdb

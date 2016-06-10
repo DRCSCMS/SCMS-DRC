@@ -33,7 +33,7 @@ namespace SCMS.Model
         public bool AddedToOR { get; set; }
         public bool IsApproved { get; set; }
         public bool IsRemoved { get; set; }
-        public Nullable<int> DeliveredAmount { get; set; }
+        //public Nullable<int> DeliveredAmount { get; set; }
         public Nullable<double> ApproximateCBM { get; set; }
         public Nullable<int> WarehouseSpaceRequired { get; set; }
         public bool IsApproved2 { get; set; }

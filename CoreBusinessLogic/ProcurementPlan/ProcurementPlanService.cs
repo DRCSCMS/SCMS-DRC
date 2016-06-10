@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using SCMS.Model;
@@ -94,6 +95,7 @@ namespace SCMS.CoreBusinessLogic.ProcurementPlan
 
         public bool SaveProcurementPlanItem(Model.ProcurementPlanItem ppItem)
         {
+
             ClearPPItemSessionData();
             ClearPPSessionData();
             using (var context = new SCMSEntities())
@@ -106,7 +108,10 @@ namespace SCMS.CoreBusinessLogic.ProcurementPlan
                 else
                 {
                     var existing = context.ProcurementPlanItems.FirstOrDefault(p => p.Id == ppItem.Id);
-                    context.Entry(existing).CurrentValues.SetValues(ppItem);
+                    context.ProcurementPlanItems.Attach(ppItem);
+                    context.Entry(ppItem).State = EntityState.Modified;
+
+                    //context.Entry(existing).CurrentValues.SetValues(ppItem);
                 }
                 return context.SaveChanges() > 0;
             }

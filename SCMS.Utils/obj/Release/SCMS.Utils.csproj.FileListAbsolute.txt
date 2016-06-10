@@ -1,0 +1,12 @@
+C:\Users\morgan\Documents\Visual Studio 2015\Projects\VTL\SCMS-DRC\SCMS.Utils\bin\Release\SCMS.Utils.dll
+C:\Users\morgan\Documents\Visual Studio 2015\Projects\VTL\SCMS-DRC\SCMS.Utils\bin\Release\SCMS.Utils.pdb
+C:\Users\morgan\Documents\Visual Studio 2015\Projects\VTL\SCMS-DRC\SCMS.Utils\bin\Release\SCMS.Model.dll
+C:\Users\morgan\Documents\Visual Studio 2015\Projects\VTL\SCMS-DRC\SCMS.Utils\bin\Release\SCMS.Resource.dll
+C:\Users\morgan\Documents\Visual Studio 2015\Projects\VTL\SCMS-DRC\SCMS.Utils\bin\Release\System.Web.Mvc.dll
+C:\Users\morgan\Documents\Visual Studio 2015\Projects\VTL\SCMS-DRC\SCMS.Utils\bin\Release\EntityFramework.dll
+C:\Users\morgan\Documents\Visual Studio 2015\Projects\VTL\SCMS-DRC\SCMS.Utils\bin\Release\SCMS.Model.pdb
+C:\Users\morgan\Documents\Visual Studio 2015\Projects\VTL\SCMS-DRC\SCMS.Utils\bin\Release\SCMS.Resource.pdb
+C:\Users\morgan\Documents\Visual Studio 2015\Projects\VTL\SCMS-DRC\SCMS.Utils\bin\Release\EntityFramework.xml
+C:\Users\morgan\Documents\Visual Studio 2015\Projects\VTL\SCMS-DRC\SCMS.Utils\obj\Release\SCMS.Utils.csprojResolveAssemblyReference.cache
+C:\Users\morgan\Documents\Visual Studio 2015\Projects\VTL\SCMS-DRC\SCMS.Utils\obj\Release\SCMS.Utils.dll
+C:\Users\morgan\Documents\Visual Studio 2015\Projects\VTL\SCMS-DRC\SCMS.Utils\obj\Release\SCMS.Utils.pdb

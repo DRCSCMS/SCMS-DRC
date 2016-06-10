@@ -1,0 +1,9 @@
+C:\Users\morgan\Documents\Visual Studio 2015\Projects\VTL\SCMS-DRC\SCMS.Resources\bin\Release\SCMS.Resource.dll
+C:\Users\morgan\Documents\Visual Studio 2015\Projects\VTL\SCMS-DRC\SCMS.Resources\bin\Release\SCMS.Resource.pdb
+C:\Users\morgan\Documents\Visual Studio 2015\Projects\VTL\SCMS-DRC\SCMS.Resources\obj\Release\SCMS.Resource.csprojResolveAssemblyReference.cache
+C:\Users\morgan\Documents\Visual Studio 2015\Projects\VTL\SCMS-DRC\SCMS.Resources\obj\Release\SCMS.Resource.Resources-frank.resources
+C:\Users\morgan\Documents\Visual Studio 2015\Projects\VTL\SCMS-DRC\SCMS.Resources\obj\Release\SCMS.Resource.Resources-morgan.resources
+C:\Users\morgan\Documents\Visual Studio 2015\Projects\VTL\SCMS-DRC\SCMS.Resources\obj\Release\SCMS.Resource.Resources.resources
+C:\Users\morgan\Documents\Visual Studio 2015\Projects\VTL\SCMS-DRC\SCMS.Resources\obj\Release\SCMS.Resource.csproj.GenerateResource.Cache
+C:\Users\morgan\Documents\Visual Studio 2015\Projects\VTL\SCMS-DRC\SCMS.Resources\obj\Release\SCMS.Resource.dll
+C:\Users\morgan\Documents\Visual Studio 2015\Projects\VTL\SCMS-DRC\SCMS.Resources\obj\Release\SCMS.Resource.pdb
