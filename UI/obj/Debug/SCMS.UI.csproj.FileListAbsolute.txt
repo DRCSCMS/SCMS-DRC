@@ -404,3 +404,5 @@ C:\Users\morgan\Documents\Visual Studio 2015\Projects\VTL\SCMS-DRC\UI\obj\Debug\
 C:\Users\morgan\Documents\Visual Studio 2015\Projects\VTL\SCMS-DRC\UI\obj\Debug\SCMS.UI.dll
 C:\Users\morgan\Documents\Visual Studio 2015\Projects\VTL\SCMS-DRC\UI\obj\Debug\SCMS.UI.pdb
 C:\Users\morgan\Documents\Visual Studio 2015\Projects\VTL\SCMS-DRC\UI\bin\wkhtmltopdf.exe
+C:\Users\morgan\Documents\Visual Studio 2015\Projects\VTL\SCMS-DRC\UI\bin\System.Web.Helpers.dll
+C:\Users\morgan\Documents\Visual Studio 2015\Projects\VTL\SCMS-DRC\UI\bin\System.Web.Helpers.xml

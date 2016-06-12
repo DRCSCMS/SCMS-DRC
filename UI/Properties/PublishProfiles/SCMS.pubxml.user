@@ -108,16 +108,16 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>06/06/2016 09:43:33</publishTime>
     </File>
     <File Include="Areas/Reports/Views/BudgetReports/Index.cshtml">
-      <publishTime>06/06/2016 09:43:33</publishTime>
+      <publishTime>06/13/2016 00:31:14</publishTime>
     </File>
     <File Include="Areas/Reports/Views/DocumentReports/DocumentStatus.aspx">
       <publishTime>06/06/2016 09:43:33</publishTime>
     </File>
     <File Include="Areas/Reports/Views/DocumentReports/Index.cshtml">
-      <publishTime>06/06/2016 09:43:33</publishTime>
+      <publishTime>06/13/2016 00:25:53</publishTime>
     </File>
     <File Include="Areas/Reports/Views/FinanceReports/Index.cshtml">
-      <publishTime>06/06/2016 09:43:33</publishTime>
+      <publishTime>06/13/2016 00:33:22</publishTime>
     </File>
     <File Include="Areas/Reports/Views/FinanceReports/RFPBudgeLines.aspx">
       <publishTime>06/06/2016 09:43:33</publishTime>
@@ -135,7 +135,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>06/06/2016 09:43:33</publishTime>
     </File>
     <File Include="Areas/Reports/Views/FleetReports/Index.cshtml">
-      <publishTime>06/06/2016 09:43:33</publishTime>
+      <publishTime>06/13/2016 00:29:12</publishTime>
     </File>
     <File Include="Areas/Reports/Views/InventoryReports/GeneralInventory.aspx">
       <publishTime>06/06/2016 09:43:33</publishTime>
@@ -156,7 +156,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>06/06/2016 09:43:33</publishTime>
     </File>
     <File Include="Areas/Reports/Views/ProcurementReports/Index.cshtml">
-      <publishTime>06/06/2016 09:43:33</publishTime>
+      <publishTime>06/11/2016 23:25:55</publishTime>
     </File>
     <File Include="Areas/Reports/Views/ProcurementReports/POBudgeLines.aspx">
       <publishTime>06/06/2016 09:43:33</publishTime>
@@ -169,6 +169,9 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     </File>
     <File Include="Areas/Reports/Views/ProcurementReports/ViewORequests.aspx">
       <publishTime>06/06/2016 09:43:33</publishTime>
+    </File>
+    <File Include="Areas/Reports/Views/Shared/PartialResponses.cshtml">
+      <publishTime>06/12/2016 23:44:44</publishTime>
     </File>
     <File Include="Areas/Reports/Views/Web.config">
       <publishTime>06/10/2016 19:37:21</publishTime>
@@ -234,25 +237,28 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>06/06/2016 09:43:32</publishTime>
     </File>
     <File Include="bin/SCMS.CoreBusinessLogic.dll">
-      <publishTime>06/10/2016 20:23:51</publishTime>
+      <publishTime>06/11/2016 01:11:32</publishTime>
     </File>
     <File Include="bin/SCMS.Model.dll">
-      <publishTime>06/10/2016 20:23:49</publishTime>
+      <publishTime>06/11/2016 01:11:30</publishTime>
     </File>
     <File Include="bin/SCMS.Reports.dll">
-      <publishTime>06/10/2016 20:23:53</publishTime>
+      <publishTime>06/11/2016 01:11:33</publishTime>
     </File>
     <File Include="bin/SCMS.Resource.dll">
       <publishTime>06/10/2016 20:23:44</publishTime>
     </File>
     <File Include="bin/SCMS.UI.dll">
-      <publishTime>06/10/2016 21:00:29</publishTime>
+      <publishTime>06/13/2016 01:35:54</publishTime>
     </File>
     <File Include="bin/SCMS.Utils.dll">
-      <publishTime>06/10/2016 20:23:49</publishTime>
+      <publishTime>06/11/2016 01:11:30</publishTime>
     </File>
     <File Include="bin/sv/FluentValidation.resources.dll">
       <publishTime>06/06/2016 09:43:32</publishTime>
+    </File>
+    <File Include="bin/System.Web.Helpers.dll">
+      <publishTime>06/06/2016 09:43:35</publishTime>
     </File>
     <File Include="bin/System.Web.Mvc.dll">
       <publishTime>09/25/2014 16:41:52</publishTime>
@@ -815,6 +821,9 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     <File Include="Content/themes/copenhagen/images/icons/help.png">
       <publishTime>06/06/2016 09:43:34</publishTime>
     </File>
+    <File Include="Content/themes/copenhagen/images/icons/logout.png">
+      <publishTime>06/06/2016 09:43:34</publishTime>
+    </File>
     <File Include="Content/themes/copenhagen/images/icons/search.png">
       <publishTime>06/06/2016 09:43:34</publishTime>
     </File>
@@ -824,13 +833,25 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     <File Include="Content/themes/copenhagen/images/layout/bg1.png">
       <publishTime>06/06/2016 09:43:34</publishTime>
     </File>
+    <File Include="Content/themes/copenhagen/images/layout/bg2.png">
+      <publishTime>06/06/2016 09:43:34</publishTime>
+    </File>
     <File Include="Content/themes/copenhagen/images/layout/ddg-logo.png">
       <publishTime>06/06/2016 09:43:34</publishTime>
     </File>
     <File Include="Content/themes/copenhagen/images/layout/drc-logo.png">
       <publishTime>06/06/2016 09:43:34</publishTime>
     </File>
+    <File Include="Content/themes/copenhagen/images/layout/lock.png">
+      <publishTime>06/06/2016 09:43:34</publishTime>
+    </File>
+    <File Include="Content/themes/copenhagen/images/layout/modal.png">
+      <publishTime>06/06/2016 09:43:34</publishTime>
+    </File>
     <File Include="Content/themes/copenhagen/images/layout/scms.png">
+      <publishTime>06/06/2016 09:43:34</publishTime>
+    </File>
+    <File Include="Content/themes/copenhagen/images/layout/shell.png">
       <publishTime>06/06/2016 09:43:34</publishTime>
     </File>
     <File Include="Content/themes/copenhagen/images/layout/welcome.jpg">
@@ -1296,7 +1317,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>06/06/2016 09:43:34</publishTime>
     </File>
     <File Include="Scripts/js/Grid.js">
-      <publishTime>06/06/2016 09:43:34</publishTime>
+      <publishTime>06/11/2016 01:07:20</publishTime>
     </File>
     <File Include="Scripts/js/inventory-flow.js">
       <publishTime>06/06/2016 09:43:34</publishTime>
@@ -1866,10 +1887,10 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>06/06/2016 09:43:35</publishTime>
     </File>
     <File Include="Views/OrderRequest/Index.cshtml">
-      <publishTime>06/06/2016 09:43:35</publishTime>
+      <publishTime>06/11/2016 00:44:46</publishTime>
     </File>
     <File Include="Views/OrderRequest/LoadOrderRequest.cshtml">
-      <publishTime>06/06/2016 09:43:35</publishTime>
+      <publishTime>06/11/2016 00:44:46</publishTime>
     </File>
     <File Include="Views/OrderRequest/LoadRequestItem.cshtml">
       <publishTime>06/06/2016 09:43:35</publishTime>
@@ -1926,22 +1947,22 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>06/06/2016 09:43:35</publishTime>
     </File>
     <File Include="Views/ProcurementPlan/AddNewItem4PP.cshtml">
-      <publishTime>06/06/2016 09:43:35</publishTime>
+      <publishTime>06/10/2016 23:17:22</publishTime>
     </File>
     <File Include="Views/ProcurementPlan/CreatePP.cshtml">
       <publishTime>06/06/2016 09:43:35</publishTime>
     </File>
     <File Include="Views/ProcurementPlan/CreatePPItem.cshtml">
-      <publishTime>06/06/2016 09:43:35</publishTime>
+      <publishTime>06/10/2016 23:18:28</publishTime>
     </File>
     <File Include="Views/ProcurementPlan/CreatePPStep2.cshtml">
-      <publishTime>06/06/2016 09:43:35</publishTime>
+      <publishTime>06/10/2016 22:50:52</publishTime>
     </File>
     <File Include="Views/ProcurementPlan/Index.cshtml">
       <publishTime>06/06/2016 09:43:35</publishTime>
     </File>
     <File Include="Views/ProcurementPlan/ViewPP.cshtml">
-      <publishTime>06/06/2016 09:43:35</publishTime>
+      <publishTime>06/10/2016 22:54:29</publishTime>
     </File>
     <File Include="Views/ProcurementPlan/ViewPPList.cshtml">
       <publishTime>06/06/2016 09:43:35</publishTime>
@@ -1989,7 +2010,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>06/06/2016 09:43:35</publishTime>
     </File>
     <File Include="Views/PurchaseOrder/ViewPurchaseOrdersDetails.cshtml">
-      <publishTime>06/06/2016 09:43:35</publishTime>
+      <publishTime>06/11/2016 00:57:29</publishTime>
     </File>
     <File Include="Views/QuickSearch/Index.cshtml">
       <publishTime>06/06/2016 09:43:35</publishTime>
@@ -2013,7 +2034,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>06/06/2016 09:43:35</publishTime>
     </File>
     <File Include="Views/RequestReview/ApprovePO.cshtml">
-      <publishTime>06/06/2016 09:43:35</publishTime>
+      <publishTime>06/11/2016 00:55:22</publishTime>
     </File>
     <File Include="Views/RequestReview/ApprovePP.cshtml">
       <publishTime>06/06/2016 09:43:35</publishTime>

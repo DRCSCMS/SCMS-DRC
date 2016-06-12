@@ -287,7 +287,7 @@ namespace SCMS.UI.Areas.Reports.Controllers
             //if (pagecount == 1)
             //    return PreparePdf(orId, ++pagecount);
             //else 
-            return File(output, "application/pdf", "OR_" + DateTime.Now.FormatDDMMMYYYYHHmm());
+            return File(output, "application/pdf", "OR_" + DateTime.Now.FormatDDMMMYYYYHHmm()+".pdf");
         }
 
         private void PrepareLabels(Dictionary<String, String> data)

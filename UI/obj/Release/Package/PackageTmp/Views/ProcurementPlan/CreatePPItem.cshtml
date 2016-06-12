@@ -41,7 +41,7 @@
                     @Html.HiddenFor(model => model.ProcurementPlanId)
                 </td>
                 <td title="@Resources.OrderRequest_AddNewItem4OR_AddNewItem">
-                    <a href="#" onclick="sendRequest('/ProcurementPlan/AddNewItem?ppId=@ppId&editMode=@Model.EditMode', 'popup-page', 'popup-loading');CenterPopup();"><img src="../../Content/images/Add-Green-Button-icon.png" alt="@Resources.OrderRequest_AddNewItem4OR_AddNewItem" /></a>
+                    <a href="#" style="display: none" onclick="sendRequest('/ProcurementPlan/AddNewItem?ppId=@ppId&editMode=@Model.EditMode', 'popup-page', 'popup-loading');CenterPopup();"><img src="../../Content/images/Add-Green-Button-icon.png" alt="@Resources.OrderRequest_AddNewItem4OR_AddNewItem" /></a>
                 </td>
             </tr>
             <tr>

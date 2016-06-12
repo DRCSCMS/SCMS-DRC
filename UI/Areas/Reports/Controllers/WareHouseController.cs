@@ -78,7 +78,7 @@ namespace SCMS.UI.Areas.Reports.Controllers
                 options.Add(" --copies 2 ");
                 Byte[] output = WkHtml2Pdf.CreateReport(data, "warehouse-release-form.html", options);
 
-                return File(output, "application/pdf", "WRN_" + DateTime.Now.FormatDDMMMYYYYHHmm());
+                return File(output, "application/pdf", "WRN_" + DateTime.Now.FormatDDMMMYYYYHHmm()+".pdf");
             }
 
         }

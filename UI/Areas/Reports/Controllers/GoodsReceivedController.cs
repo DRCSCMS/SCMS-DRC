@@ -97,7 +97,7 @@ namespace SCMS.UI.Areas.Reports.Controllers
             options.Add(" --copies 2 ");
             Byte[] output = WkHtml2Pdf.CreateReport(data, "goods-received-note.html", options);
 
-            return File(output, "application/pdf", "GRN_" + DateTime.Now.FormatDDMMMYYYYHHmm());
+            return File(output, "application/pdf", "GRN_" + DateTime.Now.FormatDDMMMYYYYHHmm() + ".pdf");
         }
 
         public ActionResult GRNTemplate(Model.GoodsReceivedNote model)
@@ -171,7 +171,7 @@ namespace SCMS.UI.Areas.Reports.Controllers
 
             Byte[] output = WkHtml2Pdf.CreateReport(data, "goods-received-note.html");
 
-            return File(output, "application/pdf", "GRN_Template_" + DateTime.Now.FormatDDMMMYYYYHHmm());
+            return File(output, "application/pdf", "GRN_Template_" + DateTime.Now.FormatDDMMMYYYYHHmm() + ".pdf");
         }
 
 

@@ -71,7 +71,7 @@ namespace SCMS.UI.Areas.Reports.Controllers
             options.Add(" --copies 2 ");
             Byte[] output = WkHtml2Pdf.CreateReport(data, "CompletionCertificate.htm", options);
 
-            return File(output, "application/pdf", "CC_" + DateTime.Now.FormatDDMMMYYYYHHmm());
+            return File(output, "application/pdf", "CC_" + DateTime.Now.FormatDDMMMYYYYHHmm() + ".pdf");
         }
 
 

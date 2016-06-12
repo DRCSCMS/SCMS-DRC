@@ -7,7 +7,7 @@
         UpdateTargetId = "popup-page",
         LoadingElementId = "popup-loading",
         HttpMethod = "Post",
-        Url = Url.Action("AddNewItem", new { ppId = ViewBag.PPId, editMode=Model.EditMode }),
+        Url = Url.Action("AddNewItem", new { ppId = @ViewBag.PPId, editMode=Model.EditMode }),
         OnSuccess = success
     };  
   }

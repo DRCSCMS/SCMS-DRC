@@ -83,6 +83,10 @@
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Helpers, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.20505.0\lib\net40\System.Web.Helpers.dll</HintPath>
+    </Reference>
     <Reference Include="System.Web.Mvc, Version=4.0.0.1, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
     <Reference Include="System.Web.Razor, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.AspNet.Razor.2.0.20505.0\lib\net40\System.Web.Razor.dll</HintPath>
@@ -726,7 +730,6 @@
     <Folder Include="Areas\Admin\Views\Shared\" />
     <Folder Include="Areas\Analytics\Views\Shared\" />
     <Folder Include="Areas\Reports\Models\" />
-    <Folder Include="Areas\Reports\Views\Shared\" />
     <Folder Include="Content\tmp_reports\html\ex_files\" />
     <Folder Include="obj\Debug\edmxResourcesToEmbed\Models\" />
     <Folder Include="obj\Debug\TempPE\" />
@@ -888,6 +891,7 @@
     <Content Include="Areas\Reports\Views\FleetReports\Index.cshtml" />
     <Content Include="Areas\Reports\Views\InventoryReports\Index.cshtml" />
     <Content Include="Areas\Reports\Views\ProcurementReports\Index.cshtml" />
+    <Content Include="Areas\Reports\Views\Shared\PartialResponses.cshtml" />
     <None Include="Content\images\jquery.dataTables\Sorting icons.psd" />
     <Content Include="NLog.config" />
     <None Include="obj\Debug\DesignTimeResolveAssemblyReferences.cache" />

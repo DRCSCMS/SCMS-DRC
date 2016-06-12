@@ -22,11 +22,11 @@
             @Model.RefNumber
             @if (Model.IsInternational)
             {
-                @string.Format("[{0}]", Constants.INTERNATIONAL)
+                string.Format("[{0}]", Constants.INTERNATIONAL);
             }
             else
             {
-                @string.Format("[{0}]", Constants.LOCAL)
+                string.Format("[{0}]", Constants.LOCAL);
             }
         </h4>
         <center><b style="font-weight: bold;">@Resources.Global_String_Date:&nbsp;&nbsp;</b>@Model.PODate.ToString(Constants.DATE_FORMAT)</center>

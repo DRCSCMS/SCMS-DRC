@@ -215,7 +215,7 @@ namespace SCMS.UI.Areas.Reports.Controllers
 
             Byte[] output = WkHtml2Pdf.CreateReport(data, "project-budget.html");//= new Byte[1];;//
 
-            return File(output, "application/pdf", "ProjectB_" + DateTime.Now.FormatDDMMMYYYYHHmm());
+            return File(output, "application/pdf", "ProjectB_" + DateTime.Now.FormatDDMMMYYYYHHmm()+".pdf");
         }
 
         private string ND2S(decimal? num)

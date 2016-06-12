@@ -125,7 +125,7 @@ namespace SCMS.UI.Areas.Reports.Controllers
             options.Add(" --orientation Landscape ");
             //options.Add(" --copies 3 ");
             Byte[] output = WkHtml2Pdf.CreateReport(data, "master-budget.html", options);
-            return File(output, "application/pdf", "Project_Budget_" + DateTime.Now.FormatDDMMMYYYYHHmm());
+            return File(output, "application/pdf", "Project_Budget_" + DateTime.Now.FormatDDMMMYYYYHHmm() + ".pdf");
         }
 
         public ActionResult Summary(Guid currencyId, Guid countryProgrammeId)
@@ -218,7 +218,7 @@ namespace SCMS.UI.Areas.Reports.Controllers
 
             Byte[] output = WkHtml2Pdf.CreateReport(data, "master-budget.html", options);
 
-            return File(output, "application/pdf", "Project_Bu=dget_" + DateTime.Now.FormatDDMMMYYYYHHmm());
+            return File(output, "application/pdf", "Project_Bu=dget_" + DateTime.Now.FormatDDMMMYYYYHHmm()+".pdf");
         }
 
 

@@ -853,9 +853,7 @@ namespace SCMS.UI.Controllers
                 {
                     using (var dbContext = new SCMSEntities())
                     {
-
-
-
+                        
                         ProcurementPlanItem item;
                         bool actionPerformed = false;
                         foreach (var ppItem in model.PPItemList)

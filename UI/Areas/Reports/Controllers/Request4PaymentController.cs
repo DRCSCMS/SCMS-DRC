@@ -171,7 +171,7 @@ namespace SCMS.UI.Areas.Reports.Controllers
             options.Add(" --copies 2 ");
             Byte[] output = WkHtml2Pdf.CreateReport(data, "request4payment.html", options);
 
-            return File(output, "application/pdf", "RRP_" + DateTime.Now.FormatDDMMMYYYYHHmm());
+            return File(output, "application/pdf", "RRP_" + DateTime.Now.FormatDDMMMYYYYHHmm() + ".pdf");
         }
 
 

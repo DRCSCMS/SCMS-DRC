@@ -52,3 +52,5 @@ C:\Users\morgan\Documents\Visual Studio 2015\Projects\VTL\SCMS-DRC\UI\bin\sv\Flu
 C:\Users\morgan\Documents\Visual Studio 2015\Projects\VTL\SCMS-DRC\UI\obj\Release\SCMS.UI.csprojResolveAssemblyReference.cache
 C:\Users\morgan\Documents\Visual Studio 2015\Projects\VTL\SCMS-DRC\UI\obj\Release\SCMS.UI.dll
 C:\Users\morgan\Documents\Visual Studio 2015\Projects\VTL\SCMS-DRC\UI\obj\Release\SCMS.UI.pdb
+C:\Users\morgan\Documents\Visual Studio 2015\Projects\VTL\SCMS-DRC\UI\bin\System.Web.Helpers.dll
+C:\Users\morgan\Documents\Visual Studio 2015\Projects\VTL\SCMS-DRC\UI\bin\System.Web.Helpers.xml

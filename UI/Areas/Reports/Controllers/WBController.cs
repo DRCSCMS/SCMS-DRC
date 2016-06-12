@@ -111,7 +111,7 @@ namespace SCMS.UI.Areas.Reports.Controllers
             List<String> options = new List<string>();
             options.Add(" --copies 3 ");
             Byte[] output = WkHtml2Pdf.CreateReport(data, "Way-Bill.htm", options);
-            return File(output, "application/pdf", "WB_" + DateTime.Now.FormatDDMMMYYYYHHmm());
+            return File(output, "application/pdf", "WB_" + DateTime.Now.FormatDDMMMYYYYHHmm()+".pdf");
 
         }
     }

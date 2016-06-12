@@ -7,11 +7,11 @@
             @Model.RefNumber
             @if (Model.IsInternational)
             {
-                @string.Format("[{0}]", Constants.INTERNATIONAL)
+                string.Format("[{0}]", Constants.INTERNATIONAL);
             }
             else
             {
-                @string.Format("[{0}]", Constants.LOCAL)
+                string.Format("[{0}]", Constants.LOCAL);
             }
         </h3>
     </div>

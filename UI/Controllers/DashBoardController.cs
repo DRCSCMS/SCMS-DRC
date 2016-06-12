@@ -6,10 +6,13 @@ using SCMS.UI.Models;
 using SCMS.Model;
 using SCMS.CoreBusinessLogic.Budgeting;
 using System.Data;
+using System.Drawing;
+using System.Web.Helpers;
 using SCMS.CoreBusinessLogic.Security;
 using SCMS.CoreBusinessLogic.ActionFilters;
 using SCMS.Resource;
 using SCMS.CoreBusinessLogic.GeneralHelper;
+
 
 namespace SCMS.UI.Controllers
 {
@@ -93,13 +96,12 @@ namespace SCMS.UI.Controllers
                 Row[2] = dbContext.PaymentRequests.Count(p => p.IsReviewed == true && p.IsAuthorized == false && p.CountryProgrammeId == countryProg.Id);
                 Row[3] = dbContext.PaymentRequests.Count(p => p.IsAuthorized == true && p.CountryProgrammeId == countryProg.Id);
 
-                //var myChart = new Chart(width: 375, height: 300, theme: ChartTheme.Green)
-                //        .AddTitle(Resources.Global_String_DocumentStatistics)
-                //        .AddLegend(title: "Key", name: null)
-                //        .DataBindTable(dd.AsDataView(), dd.Columns[0].ColumnName)
-                //        .Write("png");
-
-
+                var myChart = new Chart(width: 375, height: 300, theme: ChartTheme.Green)
+                        .AddTitle(Resources.Global_String_DocumentStatistics)
+                        .AddLegend(title: "Key", name: null)
+                        .DataBindTable(dd.AsDataView(), dd.Columns[0].ColumnName)
+                        .Write("png");
+                
                 return null;
 
             }
@@ -189,12 +191,12 @@ namespace SCMS.UI.Controllers
 
 
 
-                //var myChart = new Chart(width: 375, height: 300, theme: ChartTheme.Green)
-                //        .AddTitle(Resources.General_String_MasterBudget)
+                var myChart = new Chart(width: 375, height: 300, theme: ChartTheme.Green)
+                        .AddTitle(Resources.General_String_MasterBudget)
 
-                //        .AddLegend(title: "Key", name: null)
-                //        .DataBindTable(dd.AsDataView(), dd.Columns[0].ColumnName)
-                //        .Write("png");
+                        .AddLegend(title: "Key", name: null)
+                        .DataBindTable(dd.AsDataView(), dd.Columns[0].ColumnName)
+                        .Write("png");
             }
             return null;
         }
